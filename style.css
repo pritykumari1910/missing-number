@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+   
+    background-color:darkslategray;
+}
+
+.container {
+    margin-top: 100px;
+    color:black
+    
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: orange;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 18px;
+    
+}
+

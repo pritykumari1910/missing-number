@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Missing Number Finder</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color:darkslategray;
+    }
+    #input-container {
+        margin-top: 50px;
+        
+    }
+    #result {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<h1>Missing Number Finder</h1>
+<div id="input-container">
+    <label for="numbers">Enter numbers (comma-separated):</label><br>
+    <input type="text" id="numbers" name="numbers"><br><br>
+    <button onclick="findMissingNumber()">Find Missing Number</button>
+</div>
+<div id="result"></div>
+
+<script>
+function findMissingNumber() {
+    var numbersInput = document.getElementById("numbers").value;
+    var numbers = numbersInput.split(",").map(Number);
+    var n = numbers.length + 1;
+    var totalSum = (n * (n + 1)) / 2;
+    var arraySum = numbers.reduce((acc, curr) => acc + curr, 0);
+    var missingNumber = totalSum - arraySum;
+    document.getElementById("result").innerText = "The missing number is: " + missingNumber;
+}
+</script>
+</body>
+</html>
